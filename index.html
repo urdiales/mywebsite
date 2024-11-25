@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Lab Test Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0078d4;
+            color: #fff;
+            padding: 20px 0;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Home Lab Test Website</h1>
+    </header>
+    <section>
+        <p>This is a simple test page to validate that your home lab web server is working correctly.</p>
+        <p>Feel free to modify this page to suit your needs!</p>
+        <p><strong>Current Date:</strong> <span id="date"></span></p>
+        <p><strong>Current Time:</strong> <span id="time"></span></p>
+    </section>
+    <footer>
+        <p>&copy; <span id="year"></span> My Home Lab | Created for testing purposes</p>
+    </footer>
+    <script>
+        const now = new Date();
+        document.getElementById('date').textContent = now.toLocaleDateString();
+        document.getElementById('time').textContent = now.toLocaleTimeString();
+        document.getElementById('year').textContent = now.getFullYear();
+    </script>
+</body>
+</html>
